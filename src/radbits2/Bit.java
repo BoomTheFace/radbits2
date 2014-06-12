@@ -1,21 +1,28 @@
 package radbits2;
 
 public class Bit {
-	public float radius;
-	public float angle;
-	public float sin_of_angle;
+	private float radius;
+	private float angle;
+	private float sin_of_angle;
 	
-	public void setRadius(float newValue){
-		radius = newValue;
+	public float getAngle() {
+		return angle;
 	}
-	public void setAngle(float newValue){
-		angle = newValue;
+	public void setAngle(float angle) {
+		this.angle = angle;
 	}
-	public void setSinOfAngle(float newValue){
-		sin_of_angle = newValue;
+	public float getSin_of_angle() {
+		return sin_of_angle;
 	}
-	public void getRadius(float cut_depth, float cut_radius, float sin_of_angle){
-		radius = cut_radius * ((2+(cut_depth/cut_radius)*((1/Math.pow(sin_of_angle, 2))-1)/(2/sin_of_angle))
+	public void setSin_of_angle(float sin_of_angle) {
+		this.sin_of_angle = sin_of_angle;
 	}
-
+	public float getRadius() {
+		return radius;
+	}
+	public void setRadius(float radius) {
+		this.radius = radius;
+	}
+	
+	
 }
